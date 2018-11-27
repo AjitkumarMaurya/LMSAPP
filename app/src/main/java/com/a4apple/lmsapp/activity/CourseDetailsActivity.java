@@ -328,14 +328,13 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                                 totalUnits++;
 
                                 try {
-                                    if (courseContentsData.get(position).getStatus().toString().equalsIgnoreCase("A")) {
+                                    if (courseContentsData.get(position).getStatus().toString().equalsIgnoreCase("A") || courseContentsData.get(position).getStatus().toString().equalsIgnoreCase("D")) {
 
                                         remainUnits++;
 
                                     }
                                 } catch (Exception e) {
-
-                                    e.getMessage();
+                                    Log.e("error",e.getMessage());
                                 }
 
 

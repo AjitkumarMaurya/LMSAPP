@@ -393,6 +393,11 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
     @SuppressLint({"SetJavaScriptEnabled", "SetTextI18n"})
     public void clickNext(final int i, Boolean val, @Nullable String str) {
+
+        Date d = new Date();
+        CharSequence sd = DateFormat.format("HH:mm dd/MM/yyyy ", d.getTime());
+
+
         try {
             if (jcplayerView.isPlaying()) {
                 jcplayerView.kill();
@@ -865,9 +870,10 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                 try {
                                                     title.setText("" + testDetailsList.get(0).getContentTitle().toString());
                                                     desc.setText("Congratulations " + "\n" + "you passed!" + "\n\n" + "Time allowed : " + (int) Math.round((Double) testDetailsList.get(0).getDuration()) + " minutes " + "\n" + "Time used : " + getPerfectTimeString(testDetailsList.get(0).getTime_used().toString()) + " " + "\n" + " completed at: " + getPerfectTime(testDetailsList.get(0).getCompleted_date().toString()));
-                                                    pass.setText(" Score  " + testDetailsList.get(0).getScore().toString() + "%");
+                                                    pass.setText(" Score  " + (int) Math.round((Double) testDetailsList.get(0).getScore()) + "%");
                                                 } catch (Exception e) {
-                                                    e.getMessage();
+                                                    Log.e("error", e.getMessage());
+
                                                 }
 
                                                 diableBottomBtn();
@@ -886,7 +892,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                     try {
                                                         title.setText("" + testDetailsList.get(0).getContentTitle().toString());
                                                         desc.setText("Sorry " + "\n" + "you did't passed!" + "\n\n" + "Time allowed : " + (int) Math.round((Double) testDetailsList.get(0).getDuration()) + " minutes" + "\n" + "Time used : " + getPerfectTimeString(testDetailsList.get(0).getTime_used().toString()) + " " + "\n" + " completed at: " + getPerfectTime(testDetailsList.get(0).getCompleted_date().toString()));
-                                                        pass.setText(" Score  " + testDetailsList.get(0).getScore().toString() + "%");
+                                                        pass.setText(" Score  " + (int) Math.round((Double) testDetailsList.get(0).getScore()) + "%");
                                                     } catch (Exception e) {
                                                         e.getMessage();
                                                     }
@@ -938,7 +944,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                     try {
                                                         title.setText("" + testDetailsList.get(0).getContentTitle().toString());
                                                         desc.setText("Sorry " + "\n" + "you did't passed!" + "\n\n" + "Time allowed : " + (int) Math.round((Double) testDetailsList.get(0).getDuration()) + " minutes" + "\n" + "Time used : " + getPerfectTimeString(testDetailsList.get(0).getTime_used().toString()) + " " + "\n" + " completed at: " + getPerfectTime(testDetailsList.get(0).getCompleted_date().toString()));
-                                                        pass.setText(" Score  " + testDetailsList.get(0).getScore().toString() + "%");
+                                                        pass.setText(" Score  " + (int) Math.round((Double) testDetailsList.get(0).getScore()) + "%");
                                                     } catch (Exception e) {
                                                         e.getMessage();
                                                     }
@@ -956,7 +962,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                                                 title.setText(testDetailsList.get(0).getContentTitle().toString());
                                                 desc.setText("This test contains " + testquestionLists.size() + " questions You have " + (int) Math.round((Double) testDetailsList.get(0).getDuration()) + " minute to complete it Once started, the time allowed cannot be stopped");
-                                                pass.setText("The passing score is " + testDetailsList.get(0).getPassingScore().toString() + "%");
+                                                pass.setText("The passing score is " + (int) Math.round((Double) testDetailsList.get(0).getPassingScore()) + "%");
                                                 diableBottomBtn();
 
                                                 back.setVisibility(View.VISIBLE);
@@ -1009,7 +1015,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                     });
 
                 } catch (Exception e) {
-                    e.getMessage();
+                    Log.e("error",e.getMessage());
                 }
 
             }
@@ -1018,8 +1024,6 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
             try {
 
-                Date d = new Date();
-                CharSequence sd = DateFormat.format("HH:mm yyyy/MM/dd ", d.getTime());
 
                 diableBottomBtn();
                 if (preferenceManager.getKeyValueBoolean("testPass")) {
@@ -1033,10 +1037,10 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                     Button gomainscreen = viewVideo.findViewById(R.id.btn_eptest_start);
 
                     title.setText(preferenceManager.getKeyValueString("msgTest"));
-                    desc1.setText("Time Allowed: " + preferenceManager.getKeyValueString("resultTestTimeAllow") + "Minutes");
+                    desc1.setText("Time Allowed: " + preferenceManager.getKeyValueString("resultTestTimeAllow") + " Minutes");
                     desc2.setText("Time Used: " + preferenceManager.getKeyValueString("resultTestTimeUsed") + " ");
                     desc3.setText("Completed at: " + sd);
-                    pass.setText("Score:" + preferenceManager.getKeyValueString("testResultSocre") + "%");
+                    pass.setText("Score: " + preferenceManager.getKeyValueString("testResultSocre") + "%");
 
                     //  Log.e("csbcbs","----"+idTest+"----"+"----"+preferenceManager.getKeyValueString("userId")+"----"+""+preferenceManager.getKeyValueString("resultTestTimeUsed")+"----"+""+preferenceManager.getKeyValueString("testResultSocre")+"");
 
@@ -1068,10 +1072,10 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                     Button tryagain = viewVideo.findViewById(R.id.btn_etest_start);
 
                     title.setText(preferenceManager.getKeyValueString("msgTest"));
-                    desc1.setText("Time Allowed: " + preferenceManager.getKeyValueString("resultTestTimeAllow") + "Minutes");
+                    desc1.setText("Time Allowed: " + preferenceManager.getKeyValueString("resultTestTimeAllow") + " Minutes");
                     desc2.setText("Time Used: " + preferenceManager.getKeyValueString("resultTestTimeUsed") + "");
                     desc3.setText("Completed at: " + sd);
-                    pass.setText("Score:" + preferenceManager.getKeyValueString("testResultSocre") + "%");
+                    pass.setText("Score: " + preferenceManager.getKeyValueString("testResultSocre") + "%");
 
                     back.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -1126,13 +1130,22 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
     }
 
 
+    public String getPassScore(String str) {
+
+        String[] parts = str.split(".");
+
+        return parts[0];
+
+    }
+
     public String getPerfectTime(String str) {
 
         String[] parts = str.split("T");
         String part1 = parts[0];
         String part2 = parts[1];
-
-        return part2.substring(0, 5) + "  " + part1.replace("-","/");
+        String[] parts2 = part1.split("-");
+        String datestr=parts2[2]+"/"+parts2[1]+"/"+parts2[0];
+        return part2.substring(0, 5) + "  " + datestr;
 
 
     }
@@ -1144,15 +1157,23 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
         String[] parts = str.split(":");
         String part1 = parts[0];
         String part2 = parts[1];
-        String part3 = parts[1];
+        String part3 = parts[2];
 
         int hour = Integer.parseInt(part1);
+        int minuts = Integer.parseInt(part2);
         String rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
         try {
             if (hour > 0) {
                 rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
             } else {
-                rtn = part2 + " minute " + part3 + " second";
+
+                if (minuts > 0) {
+                    rtn = part2 + " minute " + part3 + " second";
+
+                } else {
+                    rtn = part3 + " second";
+                }
+
             }
         } catch (Exception e) {
 

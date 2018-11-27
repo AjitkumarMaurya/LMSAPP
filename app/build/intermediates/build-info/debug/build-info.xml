@@ -5,33 +5,34 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="METHOD_DELETED"
     plugin-version="3.2.1"
-    timestamp="1543304221135"
+    timestamp="1543317669669"
     token="-2172356481278849435"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="20119" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="265" />
+        duration="0" />
     <task
         name="verifier"
-        duration="98" />
-
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
+        duration="0" />
 
     <build
         build-mode="FULL"
-        timestamp="1543304064590"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1543316416383"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
         <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
@@ -39,28 +40,22 @@
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -71,12 +66,33 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1543304221135"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1543316996775"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
     </build>
+    <build
+        build-mode="COLD"
+        timestamp="1543317172698"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1543317439504"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1543317669669"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

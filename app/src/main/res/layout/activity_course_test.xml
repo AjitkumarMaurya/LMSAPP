@@ -94,7 +94,7 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:text="|"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -105,7 +105,7 @@
             android:id="@+id/tv_course_test_time_num"
             android:drawableLeft="@drawable/timer"
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="2.8"
             android:text="0m0s"
             android:textStyle="bold"
             android:textColor="@color/white"

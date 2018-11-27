@@ -367,8 +367,41 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
         preferenceManager.setKeyValueString("resultTestCount", String.valueOf(quesTotal));
         preferenceManager.setKeyValueString("testResultSocre", String.valueOf(score));
         preferenceManager.setKeyValueString("resultTestTimeAllow", String.valueOf(testDuration));
-        preferenceManager.setKeyValueString("resultTestTimeUsed", testTimeTake);
+        preferenceManager.setKeyValueString("resultTestTimeUsed", getPerfectTimeString(testTimeTake));
 
+
+    }
+
+
+    private String getPerfectTimeString(String str) {
+
+
+        String[] parts = str.split(":");
+        String part1 = parts[0];
+        String part2 = parts[1];
+        String part3 = parts[2];
+
+        int hour = Integer.parseInt(part1);
+        int minuts = Integer.parseInt(part2);
+        String rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
+        try {
+            if (hour > 0) {
+                rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
+            } else {
+
+                if (minuts > 0) {
+                    rtn = part2 + " minute " + part3 + " second";
+
+                } else {
+                    rtn = part3 + " second";
+                }
+
+            }
+        } catch (Exception e) {
+
+            Log.e("eeee", e.getMessage());
+        }
+        return rtn;
 
     }
 
@@ -390,7 +423,7 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
     public String getTimeUsered(String total, String left) {
 
         long difference = 0;
-        long second = 0, minute = 0, hour = 0;
+        long second=1 , minute=0 , hour = 0;
 
         try {
 
@@ -417,13 +450,13 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
 
 
         } catch (Exception e) {
-            e.getMessage();
+            Log.e("error", e.getMessage());
         }
 
         preferenceManager.setKeyValueString("resultTestTimeUsed2", "" + hour + ":" + minute + ":" + second);
 
 
-        return String.valueOf(hour + " hour " + minute + " minute " + second + " second");
+        return String.valueOf(hour + ":" + minute + ":" + second);
 
     }
 
@@ -484,10 +517,16 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
             TextView title = viewVideo.findViewById(R.id.tv_mcq_question_title);
             LinearLayout mcqview = viewVideo.findViewById(R.id.lin_mcq);
             title.setText(questionListsDetails.get(0).getQuestion().toString());
+
+            if (testDetails.get(0).getShuffleAnswers().toString().equalsIgnoreCase("C")) {
+                Collections.shuffle(mcqAnswerLists);
+            }
+
             for (int i = 0; i < mcqAnswerLists.size(); i++) {
                 if (mcqAnswerLists.get(i).getCorrect().toString().equalsIgnoreCase("A")) {
                     ansMCQList.add(mcqAnswerLists.get(i).getAnswer().toString());
                 }
+
                 CheckBox ch = new CheckBox(this);
                 ch.setId(i);
                 ch.setTextColor(Color.BLACK);
@@ -540,7 +579,7 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
                             Log.e("oder", str);
                             tempOderingList.add(str);
                         } catch (Exception e) {
-                            e.getMessage();
+                            Log.e("error",e.getMessage());
                         }
                     }
 
@@ -560,7 +599,7 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
                             Log.e("oder", str);
                             tempOderingList.add(str);
                         } catch (Exception e) {
-                            e.getMessage();
+                            Log.e("error",e.getMessage());
                         }
                     }
                 }
