@@ -100,10 +100,10 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
         preferenceManager = new PreferenceManager(this);
 
-        if (getWiFiInternet()){
+        if (getWiFiInternet()) {
             checkConnection();
 
-        }else {
+        } else {
             checkConnection();
 
         }
@@ -172,10 +172,9 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
     }
 
 
-    public boolean getWiFiInternet()
-    {
-        boolean val =false;
-        if(preferenceManager.getWiFiSession()){
+    public boolean getWiFiInternet() {
+        boolean val = false;
+        if (preferenceManager.getWiFiSession()) {
 
             final ConnectivityManager connMgr = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -188,10 +187,10 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
                 if (activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
 
-                    val=true;
+                    val = true;
 
                 } else {
-                    android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
+                    android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
                     builder.setCancelable(false);
                     builder.setMessage("Please connect to Wi-Fi ");
                     builder.setPositiveButton("Retry", new DialogInterface.OnClickListener() {
@@ -221,6 +220,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
         }
         return val;
     }
+
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -270,7 +270,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
             intent.putExtra("courseCatName", courseCatName);
             intent.putExtra("courseName", courseName);
             intent.putExtra("indexCourse", resumeIndex);
-            intent.putExtra("completedOrder",completedOrder);
+            intent.putExtra("completedOrder", completedOrder);
 
             startActivity(intent);
 
@@ -320,7 +320,6 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                         for (int position = 0; position < courseContentsData.size(); position++) {
 
 
-
                             if (courseContentsData.get(position).getContentCategory() == 1) {
 
 
@@ -333,8 +332,9 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                                         remainUnits++;
 
                                     }
+
                                 } catch (Exception e) {
-                                    Log.e("error",e.getMessage());
+                                    Log.e("error", e.getMessage());
                                 }
 
 
@@ -346,6 +346,8 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                         duration = response.body().getCourseList().get(0).getTimeLimit().toString();
 
                         /*  if (str.equalsIgnoreCase("r")){*/
+
+
                         unitDuration.setText(remainUnits + " units/ " + totalUnits + " units");
 
                       /*  }else {
@@ -369,12 +371,10 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                                         resumeIndex = i;
 
 
-
                                         break;
                                     }
                                 } catch (Exception e) {
                                     e.getMessage();
-
 
 
                                     resumeIndex = i;
@@ -397,7 +397,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                                 }
                             }
 
-                        }catch (Exception e){
+                        } catch (Exception e) {
                             e.getMessage();
                         }
                         /*if (completedOrder.equalsIgnoreCase("N")) {
@@ -408,7 +408,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
                         Log.e("resumeIndex", "" + resumeIndex);
 
-                        preferenceManager.setKeyValueInt("resumeIndex",resumeIndex);
+                        preferenceManager.setKeyValueInt("resumeIndex", resumeIndex);
 
                         dialog.dismiss();
 
