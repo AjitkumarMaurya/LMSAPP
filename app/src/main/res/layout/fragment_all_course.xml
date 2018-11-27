@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    >
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container_all_course"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/all_course_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:padding="@dimen/_2sdp"
+            tools:listitem="@layout/custom_all_course" />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iv_allCourse_noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eaedf2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/no_data_found" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@color/white"
+    tools:context=".fragment.CourseUnitsFragment">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout_unit"
+        android:layout_width="match_parent"
+        android:padding="@dimen/_8sdp"
+        android:layout_height="wrap_content">
+
+    <ListView
+
+        android:padding="@dimen/_1sdp"
+        android:scrollbars="none"
+        android:background="@drawable/square_border"
+        android:id="@+id/courseUnits_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ><!--
+        android:drawSelectorOnTop="true"
+        android:listSelector="@color/egattaLite"-->
+    </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

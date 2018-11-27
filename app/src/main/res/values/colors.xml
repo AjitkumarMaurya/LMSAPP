@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="textColor">#4d4d4d</color>
+    <color name="egatta">#c75d1d</color>
+    <color name="egatta_lite">#f0e27534</color>
+    <color name="egattaLite">#a1c75d1d</color>
+    <color name="egatta2">#83c75d1d</color>
+
+    <color name="blue">#495b6a</color>
+    <color name="colorPrimary">#808080</color>
+    <color name="colorAccent">#c75d1d</color>
+    <color name="appTheme">#efefef</color>
+    <color name="appThemeDark">#9a9595</color>
+    <color name="backccc">#decccccc</color>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:tag="cards main container">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        card_view:cardBackgroundColor="@color/appTheme"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_Allcategory_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:text="@string/category"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#c75d1d"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/course_imageView"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_95sdp"
+                android:layout_below="@id/tv_Allcategory_name"
+                android:layout_margin="@dimen/_4sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/course_image" />
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_Allcategory_name"
+                android:layout_toRightOf="@id/course_imageView"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textViewCourseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:maxLength="45"
+                    android:text="@string/course_name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/textColor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/enroll"
+                android:layout_width="@dimen/_80sdp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/course_imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/enroll_button_round_coner"
+                android:paddingBottom="@dimen/_1sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:text="@string/enroll"
+                android:tag="unenrolled"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_courseId_all_course"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "G:\\AndroidProject\\LMSAPP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "map": [
+                {
+                    "source": "G:\\AndroidProject\\LMSAPP\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "from": {
+                        "startLines": "6,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "183,320",
+                        "endLines": "8,15",
+                        "endColumns": "12,12",
+                        "endOffsets": "314,668"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,189",
+                        "endLines": "4,11",
+                        "endColumns": "12,12",
+                        "endOffsets": "184,528"
+                    }
+                }
+            ]
+        }
+    ]
+}

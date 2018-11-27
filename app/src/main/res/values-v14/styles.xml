@@ -1,0 +1,19 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name ="colorPrimary">@color/egatta</item>
+        <item name ="colorPrimaryDark">@color/egatta</item>
+        <item name ="colorAccent">@color/egatta</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>

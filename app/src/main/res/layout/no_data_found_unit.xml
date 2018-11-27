@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/_350sdp">
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        android:text="Right Now! No Data Available For this Unit"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

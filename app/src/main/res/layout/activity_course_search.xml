@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CourseSearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar_search"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appTheme">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/appTheme"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@color/appTheme"
+                android:id="@+id/iv_back_home"
+                android:src="@drawable/ic_left"
+                android:paddingLeft="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="match_parent"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/etsearch"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:hint="Search"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:met_baseColor="#000"
+                android:focusedByDefault="false"
+                android:background="@color/appTheme"
+                android:textSize="@dimen/_12ssp"
+                app:met_accentTypeface="fonts/MyriadPro-Regular.ttf"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAnimating="true"
+                app:met_typeface="fonts/MyriadPro-Regular.ttf" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/userProfilesearch"
+                android:layout_width="0dp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_account"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                app:civ_shadow="true"
+                android:layout_gravity="center"
+                app:civ_shadow_radius="9"
+                android:background="@color/appTheme"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_below="@id/toolbar_search"
+        android:id="@+id/border2"
+        android:background="@color/egatta"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/rely"
+        android:background="@color/white"
+        android:layout_below="@id/border2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:textAlignment="center"
+            android:text="Course not found"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_recyclerview"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_below="@id/border2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

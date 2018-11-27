@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_match_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/question"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_15ssp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:gravity="center"
+            android:text="@string/drop_options_to_this_box"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp" />
+
+        <LinearLayout
+            android:id="@+id/ll_yellowLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_left_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:gravity="start"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ll_match_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:scrollbars="none"
+        />
+
+</LinearLayout>

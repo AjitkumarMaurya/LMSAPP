@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_top_layout1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/left_tv_dummy"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="#ccc"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/test_data"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tv_left_view"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="@color/egatta"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/test_data"
+                android:drawableRight="@drawable/down_arrow"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_top_layout2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/right_tv_dummy"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="#ccc"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/test_data"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+
+                android:id="@+id/tv_right_view"
+                android:layout_width="@dimen/_155sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="@color/egatta"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/test_data"
+                android:drawableRight="@drawable/down_arrow"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

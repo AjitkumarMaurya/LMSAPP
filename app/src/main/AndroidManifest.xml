@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.a4apple.lmsapp"
+    android:installLocation="preferExternal">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".LMSApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_test"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_test"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.UserHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CourseSearchActivity"
+            android:noHistory="true"
+            android:parentActivityName=".activity.UserHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CourseDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:noHistory="true"
+            android:parentActivityName=".activity.UserHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CourseStartActivity"
+            android:parentActivityName=".activity.UserHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CourseTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <receiver
+            android:name=".utility.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.FullScreenVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

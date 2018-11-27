@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tv_drag_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:text="question ?"
+    android:textColor="@color/textColor"
+    android:textSize="@dimen/_15ssp"/>
+
+<com.jmedeisis.draglinearlayout.DragLinearLayout
+    android:id="@+id/odaring_container"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_1sdp"
+    android:layout_height="wrap_content">
+</com.jmedeisis.draglinearlayout.DragLinearLayout>
+</LinearLayout>

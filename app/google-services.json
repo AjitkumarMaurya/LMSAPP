@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "158314745968",
+    "firebase_url": "https://a4applelmsapp.firebaseio.com",
+    "project_id": "a4applelmsapp",
+    "storage_bucket": "a4applelmsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158314745968:android:4fc2ba53b2232a70",
+        "android_client_info": {
+          "package_name": "com.a4apple.lmsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158314745968-iegpuvlf1qq4a4qi05bo69g6hlssa12t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a4apple.lmsapp",
+            "certificate_hash": "c28d5c5444d24caee976fa5231bb07229298c78a"
+          }
+        },
+        {
+          "client_id": "158314745968-v6jtuvc3hmti2fob9hrkgiemp7bvtgj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKutaZNMvXqRQEomJQO9orxeaftPNRkEw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158314745968-v6jtuvc3hmti2fob9hrkgiemp7bvtgj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

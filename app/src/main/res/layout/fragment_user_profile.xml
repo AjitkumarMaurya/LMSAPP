@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/close_dialog"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right"
+        android:elevation="@dimen/_1sdp"
+        android:src="@drawable/close" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/userpic_dilog"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:src="@drawable/ic_account"
+            app:civ_border_color="#c75d1d"
+            app:civ_border_width="2dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="9" />
+
+        <TextView
+            android:id="@+id/tvname_dilog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userpic_dilog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Name"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#c75d1d"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvemail_dilog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvname_dilog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="email"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvldate_dilog"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvemail_dilog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Last update: 31/05/2018"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_10ssp"
+             />
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_below="@id/tvldate_dilog"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/textColor" />
+
+        <TextView
+            android:id="@+id/tvdesc_dilog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/border"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Description"
+            android:maxLength="80"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_below="@id/tvdesc_dilog"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_incomp_course"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#c75d1d"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:src="@drawable/hourglass" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="Incompleted Course"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_comp_course"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#c75d1d"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:src="@drawable/book" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="Completed Course"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_compcirti_course"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#c75d1d"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:src="@drawable/certificate" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+
+
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:text="Completed Certificate"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_setting_dialog"
+            style="@style/ButtonSetting"
+            android:layout_below="@id/lin1"
+            android:layout_marginBottom="@dimen/default_view_spacing"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Setting" />
+
+        <Button
+            android:id="@+id/btn_logout_dialog"
+            style="@style/ButtonLight"
+            android:layout_below="@id/btn_setting_dialog"
+            android:layout_marginBottom="@dimen/default_view_spacing"
+            android:text="Logout" />
+
+    </RelativeLayout>
+</FrameLayout>

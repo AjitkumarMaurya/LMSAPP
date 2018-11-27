@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CourseDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp"
+        android:background="@color/egatta"
+        android:padding="0dp"
+        app:titleTextColor="@android:color/white">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/egatta"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_back_home_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="0.4"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_left"
+                    android:tint="@color/white"
+                    android:contentDescription="@string/todo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_cdetail_cat_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:text="Category"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/tv_cdetail_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/_45sdp"
+                    android:text="Course name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20ssp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_below="@id/toolbar"
+        android:id="@+id/border"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/lin4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/border"
+        android:background="@color/egatta">
+
+        <TextView
+            android:id="@+id/tv_unit_duration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="00 units/00 hours"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/lin4"
+        android:id="@+id/lin5"
+        android:orientation="vertical"
+        android:background="#ccc"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <TextView
+            android:id="@+id/tv_startCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Start Course "
+            android:drawablePadding="0dp"
+            android:drawableRight="@drawable/ic_right"
+            android:textStyle="bold"
+            android:textColor="@color/egatta"
+            android:textSize="@dimen/_12ssp"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin5"
+        android:background="@color/white"
+        app:tabSelectedTextColor="@color/egatta"
+        app:tabIndicatorColor="@color/egatta"
+        app:tabTextColor="@color/textColor" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout_desc"
+        android:layout_above="@id/footer_course_details"
+        android:background="@color/white" />
+
+    <include
+        android:id="@+id/footer_course_details"
+        layout="@layout/app_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

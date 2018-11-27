@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appTheme"
+    tools:context=".activity.UserHomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appTheme">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/appTheme"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="My Course List"
+                android:textAlignment="textStart"
+                android:textColor="@color/textColor"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textSize="@dimen/_20ssp"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_6sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/search" />
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/userProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_account"
+                app:civ_border_color="#EEEEEE"
+                app:civ_border_width="1dp"
+                app:civ_shadow="true"
+                android:layout_gravity="center"
+                app:civ_shadow_radius="9"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/border"
+        android:background="@color/egatta"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@id/border"
+        android:id="@+id/tab_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/appTheme"
+        app:tabTextColor="@color/textColor"
+        app:tabSelectedTextColor="@color/egatta"
+        app:tabIndicatorColor="@color/egatta"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:background="@color/white"
+        android:layout_below="@id/tab_layout"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer_main_home"
+        />
+    <include
+        android:id="@+id/footer_main_home"
+        layout="@layout/app_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
