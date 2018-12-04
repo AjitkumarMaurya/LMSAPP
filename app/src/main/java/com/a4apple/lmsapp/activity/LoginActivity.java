@@ -227,6 +227,17 @@ public class LoginActivity extends Activity implements Validator.ValidationListe
         LMSApp.getInstance().setConnectivityListener(this);
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus){
+            boolean isConnected = ConnectivityReceiver.isConnected();
+            showSnack(isConnected);
+        }
+        super.onWindowFocusChanged(hasFocus);
+
+
+    }
+
     /**
      * Callback will be triggered when there is change in
      * network connection

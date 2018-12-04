@@ -266,9 +266,23 @@ public class UserHomeActivity extends AppCompatActivity implements ConnectivityR
      */
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
+
         showSnack(isConnected);
+
+
     }
 
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus){
+            boolean isConnected = ConnectivityReceiver.isConnected();
+            showSnack(isConnected);
+        }
+        super.onWindowFocusChanged(hasFocus);
+
+
+    }
 
     public void setPager() {
 

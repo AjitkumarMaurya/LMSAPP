@@ -126,6 +126,20 @@ public class CourseStartActivity extends AppCompatActivity implements Connectivi
         alert.show();
 
     }
+/*
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus){
+            boolean isConnected = ConnectivityReceiver.isConnected();
+            showSnack(isConnected);
+        }
+        super.onWindowFocusChanged(hasFocus);
+
+
+    }
+*/
+
+
     private void checkConnection() {
         boolean isConnected = ConnectivityReceiver.isConnected();
         showSnack(isConnected);

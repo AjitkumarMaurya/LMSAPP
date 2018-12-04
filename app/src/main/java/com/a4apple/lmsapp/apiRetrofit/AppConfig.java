@@ -6,7 +6,7 @@ package com.a4apple.lmsapp.apiRetrofit;
 
 public class AppConfig {
 
-    public static final String MAIN_URL_LIST = "http://a4apple.btsilvercoins.com/a4appleservice.asmx/";
+    public static final String MAIN_URL_LIST = "http://a4apple.hiltoncable.com/a4appleservice.asmx/";
     public static final String LOGIN = "Userlogin";
     public static final String ALLCOURSE = "CourseList";
 

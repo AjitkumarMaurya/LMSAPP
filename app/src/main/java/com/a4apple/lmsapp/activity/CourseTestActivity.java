@@ -383,17 +383,17 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
 
         int hour = Integer.parseInt(part1);
         int minuts = Integer.parseInt(part2);
-        String rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
+        String rtn = part1 + " hour " + part2 + " minutes " + part3 + " seconds";
         try {
             if (hour > 0) {
-                rtn = part1 + " hour " + part2 + " minute " + part3 + " second";
+                rtn = part1 + " hour " + part2 + " minutes " + part3 + " seconds";
             } else {
 
                 if (minuts > 0) {
-                    rtn = part2 + " minute " + part3 + " second";
+                    rtn = part2 + " minutes " + part3 + " seconds";
 
                 } else {
-                    rtn = part3 + " second";
+                    rtn = part3 + " seconds";
                 }
 
             }
@@ -941,6 +941,20 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
         }
         return false;
     }
+
+/*
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus){
+            boolean isConnected = ConnectivityReceiver.isConnected();
+            showSnack(isConnected);
+        }
+        super.onWindowFocusChanged(hasFocus);
+
+
+    }
+*/
+
 
     private void checkConnection() {
         boolean isConnected = ConnectivityReceiver.isConnected();
