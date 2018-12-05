@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -100,13 +101,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
         preferenceManager = new PreferenceManager(this);
 
-        if (getWiFiInternet()) {
-            checkConnection();
-
-        } else {
-            checkConnection();
-
-        }
+        checkConnection();
 
 
         String str = "s";
@@ -174,6 +169,8 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
     public boolean getWiFiInternet() {
         boolean val = false;
+        preferenceManager = new PreferenceManager(this);
+
         if (preferenceManager.getWiFiSession()) {
 
             final ConnectivityManager connMgr = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -197,6 +194,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //if user pressed "yes", then he is allowed to exit from application
+                            dialog.dismiss();
                             Intent intent = getIntent();
                             finish();
                             startActivity(intent);
@@ -205,8 +203,8 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
                     builder.setNegativeButton("Go Settings", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
-                            startActivity(new Intent(CourseDetailsActivity.this, SettingActivity.class));
+                            dialog.dismiss();
+                            startActivityForResult(new Intent(CourseDetailsActivity.this, SettingActivity.class),4);
                         }
                     });
 
@@ -224,12 +222,8 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
     @Override
     protected void onRestart() {
         super.onRestart();
-
         checkConnection();
-
         getCourseDetailsNetworkCall("str", preferenceManager.getKeyValueInt("resumeCourseId"));
-
-
     }
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -432,11 +426,15 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
 
 
     }
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
-        if (hasFocus){
+
+        if (hasFocus) {
             boolean isConnected = ConnectivityReceiver.isConnected();
+
             showSnack(isConnected);
+
         }
         super.onWindowFocusChanged(hasFocus);
 
@@ -454,6 +452,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
     private void showSnack(boolean isConnected) {
         if (isConnected) {
 
+            getWiFiInternet();
 
         } else {
 
@@ -479,7 +478,6 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
     @Override
     protected void onResume() {
         super.onResume();
-
         LMSApp.getInstance().setConnectivityListener(this);
     }
 
@@ -488,4 +486,18 @@ public class CourseDetailsActivity extends AppCompatActivity implements Connecti
         showSnack(isConnected);
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode==4){
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
