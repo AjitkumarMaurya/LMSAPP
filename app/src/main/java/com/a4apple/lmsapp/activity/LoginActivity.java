@@ -113,6 +113,7 @@ public class LoginActivity extends Activity implements Validator.ValidationListe
         applistResponceCall.enqueue(new Callback<LoginuserResponce>() {
             @Override
             public void onResponse(Call<LoginuserResponce> call, Response<LoginuserResponce> response) {
+                dialog.dismiss();
                 try {
                     if (response.body() != null) {
                         if (response.body().getStatus().toString().equals("1")) {
@@ -144,7 +145,6 @@ public class LoginActivity extends Activity implements Validator.ValidationListe
                                 preferenceManager.setKeyValueString("lastLogin", String.valueOf(response.body().getEmployeeList().get(0).getLastdate() + " " + response.body().getEmployeeList().get(0).getLasttime()));
 
 
-                                dialog.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, UserHomeActivity.class);
                                 intent.putExtra("popup","yes");
@@ -152,12 +152,10 @@ public class LoginActivity extends Activity implements Validator.ValidationListe
 
 
                             } catch (Exception e) {
-                                dialog.dismiss();
                                 e.getMessage();
                             }
                         } else {
 
-                            dialog.dismiss();
                             Toasty.error(LoginActivity.this, "User login failed", Toast.LENGTH_LONG).show();
                         }
                     }else {
@@ -178,6 +176,8 @@ public class LoginActivity extends Activity implements Validator.ValidationListe
 
                 dialog.dismiss();
                 t.getMessage();
+                Toasty.error(LoginActivity.this, "User login failed   "+t.getMessage(), Toast.LENGTH_LONG).show();
+
             }
         });
 

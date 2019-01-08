@@ -39,7 +39,12 @@
         android:roundIcon="@drawable/app_icon_test"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.MyApp" >
+        android:theme="@style/Theme.MyApp"
+        android:usesCleartextTraffic="true" >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <activity
             android:name="com.a4apple.lmsapp.activity.SplashActivity"
             android:noHistory="true"

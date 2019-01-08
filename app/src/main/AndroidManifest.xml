@@ -29,8 +29,10 @@
         android:roundIcon="@drawable/app_icon_test"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
-        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
-        tools:replace="android:icon">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
+        tools:replace="android:icon"
+        android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity
             android:name=".activity.SplashActivity"
             android:noHistory="true"
