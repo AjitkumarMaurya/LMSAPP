@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jeancsanchez:JcPlayer:2.6.10@aar">
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/gradle/caches/transforms-1/files-1.1/JcPlayer-2.6.10.aar/c7d58e05a312e1623bef7988c6bccfc3/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/caches/transforms-1/files-1.1/JcPlayer-2.6.10.aar/c7d58e05a312e1623bef7988c6bccfc3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/caches/modules-2/files-2.1/com.github.jeancsanchez/JcPlayer/2.6.10/8c8b38960c5e3680f28c297a39c155f1e52c02cc/JcPlayer-2.6.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

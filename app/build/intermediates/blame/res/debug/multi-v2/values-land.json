@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\AndroidProject\\LMSAPP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ajit\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\30b85c1310e730206874fe193a6b8e61\\res\\values-land\\values-land.xml",
+                    "source": "/Applications/Android Studio.app/Contents/gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e7ed66b22d91f9c52836666f1ae00b64/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ajit\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\df5b27c47fe013c614e7bb4383742a6f\\res\\values-land\\values-land.xml",
+                    "source": "/Applications/Android Studio.app/Contents/gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/97841366cf2964590f7a5196c1ca2483/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

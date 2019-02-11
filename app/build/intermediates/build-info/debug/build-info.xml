@@ -1,150 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="28"
+    api-level="25"
     build-mode="COLD"
+    density="xhdpi"
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1546944156925"
-    token="-2172356481278849435"
+    timestamp="1549884606002"
+    token="43032285151889671"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="23940" />
+        duration="1100" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1151" />
+        duration="15" />
     <task
         name="verifier"
-        duration="67" />
+        duration="2" />
 
     <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="G:\AndroidProject\LMSAPP\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1546943676261"
+        timestamp="1549882698854"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1546944156925"
+        timestamp="1549884606002"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\AndroidProject\LMSAPP\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

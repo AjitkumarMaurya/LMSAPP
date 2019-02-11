@@ -1,4 +1,4 @@
-#Tue Jan 08 16:13:57 IST 2019
-base.0=G\:\\AndroidProject\\LMSAPP\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+#Mon Feb 11 17:00:07 IST 2019
+base.0=/Users/ajitmaurya/AndroidStudioProjects/LMSAPP/app/build/intermediates/transforms/dexMerger/debug/8
 path.0=classes.dex
 renamed.0=classes.dex

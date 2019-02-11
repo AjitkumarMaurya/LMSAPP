@@ -140,6 +140,8 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
     LinearLayout ll_top_layout;
 
+    int netListSiz=0;
+
     public StartCourseFragment(Context context, RelativeLayout relativeLayout, ImageView nextiv, TextView next, ImageView previv, TextView prev, List<CourseContainResponce.CourseContent> courseContentsData, Button btnNext, int i, TextView titletv, int courseId, String completedOrder) {
         this.relativeLayout = relativeLayout;
         this.next = next;
@@ -149,6 +151,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
         this.btnNext = btnNext;
         this.count = i;
         this.courseContentsData = courseContentsData;
+        this.netListSiz=courseContentsData.size()-1;
         this.context = context;
         this.titletv = titletv;
         this.courseId = String.valueOf(courseId);
@@ -876,7 +879,14 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                                                 }
 
-                                                diableBottomBtn();
+                                                if (i!=netListSiz){
+
+                                                   enableBottomBtn();
+
+                                                }else {
+                                                    diableBottomBtn();
+
+                                                }
 
                                                 start.setVisibility(View.GONE);
 
@@ -897,7 +907,20 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                         e.getMessage();
                                                     }
 
-                                                    diableBottomBtn();
+                                                    if (i!=netListSiz){
+
+                                                        if (completedOrder.equalsIgnoreCase("N")) {
+
+                                                            enableBottomBtn();
+
+                                                        }else {
+
+                                                            diableBottomBtn();                                                        }
+
+                                                    }else {
+                                                        diableBottomBtn();
+
+                                                    }
 
 
                                                     try {
@@ -949,7 +972,22 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                         e.getMessage();
                                                     }
 
-                                                    diableBottomBtn();
+
+
+                                                    if (i!=netListSiz){
+
+                                                        if (completedOrder.equalsIgnoreCase("N")) {
+                                                            enableBottomBtn();
+
+                                                        }else {
+                                                            diableBottomBtn();
+
+                                                        }
+
+                                                    }else {
+                                                        diableBottomBtn();
+
+                                                    }
 
                                                     start.setVisibility(View.GONE);
 
@@ -963,7 +1001,23 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                 title.setText(testDetailsList.get(0).getContentTitle().toString());
                                                 desc.setText("This test contains " + testquestionLists.size() + " questions You have " + (int) Math.round((Double) testDetailsList.get(0).getDuration()) + " minute to complete it Once started, the time allowed cannot be stopped");
                                                 pass.setText("The passing score is " + (int) Math.round((Double) testDetailsList.get(0).getPassingScore()) + "%");
-                                                diableBottomBtn();
+
+                                                if (i!=netListSiz){
+
+                                                    if (completedOrder.equalsIgnoreCase("N")) {
+                                                        enableBottomBtn();
+
+
+                                                    }else {
+                                                        diableBottomBtn();
+
+                                                    }
+
+                                                }else {
+                                                    diableBottomBtn();
+
+                                                }
+
 
                                                 back.setVisibility(View.VISIBLE);
 
