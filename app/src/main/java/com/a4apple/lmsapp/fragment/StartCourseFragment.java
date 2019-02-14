@@ -911,12 +911,13 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                                                         if (completedOrder.equalsIgnoreCase("N")) {
 
-                                                            enableBottomBtn();
+                                                            diableBottomBtn();
 
-                                                        }else {
 
-                                                            diableBottomBtn();                                                        }
+                                                        } else {
+                                                        enableBottomBtn();
 
+                                                    }
                                                     }else {
                                                         diableBottomBtn();
 
@@ -977,10 +978,10 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                     if (i!=netListSiz){
 
                                                         if (completedOrder.equalsIgnoreCase("N")) {
-                                                            enableBottomBtn();
+                                                            diableBottomBtn();
 
                                                         }else {
-                                                            diableBottomBtn();
+                                                            enableBottomBtn();
 
                                                         }
 
@@ -1005,12 +1006,11 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                                                 if (i!=netListSiz){
 
                                                     if (completedOrder.equalsIgnoreCase("N")) {
-                                                        enableBottomBtn();
 
-
-                                                    }else {
                                                         diableBottomBtn();
 
+                                                    }else {
+                                                        enableBottomBtn();
                                                     }
 
                                                 }else {
