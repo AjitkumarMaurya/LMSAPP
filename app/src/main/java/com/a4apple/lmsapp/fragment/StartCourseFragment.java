@@ -1100,6 +1100,16 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                     new callNetworkForTestDataSubmit(idTest, preferenceManager.getKeyValueString("userId"), preferenceManager.getKeyValueString("resultTestTimeUsed2"), preferenceManager.getKeyValueString("testResultSocre"), "A").execute();
 
+                    if (i!=netListSiz){
+                        eableNextBtn();
+                        gomainscreen.setVisibility(View.GONE);
+                        enableBottomBtn();
+
+                    }else {
+                        diableBottomBtn();
+                        gomainscreen.setVisibility(View.VISIBLE);
+
+                    }
 
                     gomainscreen.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -1110,7 +1120,6 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                     new networkCallForUpdateCourseStatus(idTest, userId, "", courseId).execute();
 
-                    eableNextBtn();
 
                     addView(viewVideo);
 
@@ -1179,6 +1188,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
     public void eableNextBtn() {
 
+        nextiv.setImageResource(R.drawable.triangle_right_orange);
         nextiv.setClickable(true);
 
     }

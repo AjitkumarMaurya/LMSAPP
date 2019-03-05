@@ -424,39 +424,47 @@ public class CourseTestActivity extends AppCompatActivity implements CompoundBut
 
         long difference = 0;
         long second=1 , minute=0 , hour = 0;
+        int tInt = Integer.parseInt(total);
 
-        try {
+        String leftTiming = convertTime(tInt);
 
-            int tInt = Integer.parseInt(total);
+        if (!left.contains("Finish!")){
 
-
-            Log.e("#### converted time", "   " + convertTime(tInt));
-
-            @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
-            Date date1 = format.parse(convertTime(tInt));
-            Date date2 = format.parse(left);
-            difference = date1.getTime() - date2.getTime();
+            try {
 
 
-            Log.e("#### diffrence time", "   " + difference);
+                Log.e("#### converted time", "   " + convertTime(tInt));
+                Log.e("#### left timer", "   " + left);
+
+                @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+                Date date1 = format.parse(convertTime(tInt));
+                Date date2 = format.parse(left);
+                difference = date1.getTime() - date2.getTime();
 
 
-            second = (difference / 1000) % 60;
-            minute = (difference / (1000 * 60)) % 60;
-            hour = (difference / (1000 * 60 * 60)) % 24;
+                Log.e("#### diffrence time", "   " + difference);
 
 
-            Log.e("#### diff time final", "   " + hour + ":" + minute + ":" + second);
+                second = (difference / 1000) % 60;
+                minute = (difference / (1000 * 60)) % 60;
+                hour = (difference / (1000 * 60 * 60)) % 24;
 
 
-        } catch (Exception e) {
-            Log.e("error", e.getMessage());
+                Log.e("#### diff time final", "   " + hour + ":" + minute + ":" + second);
+
+                leftTiming = hour + ":" + minute + ":" + second;
+
+            } catch (Exception e) {
+                Log.e("error", e.getMessage());
+            }
         }
 
-        preferenceManager.setKeyValueString("resultTestTimeUsed2", "" + hour + ":" + minute + ":" + second);
+        Log.e("#### diffrence time", "   " + leftTiming);
+
+        preferenceManager.setKeyValueString("resultTestTimeUsed2", "" + leftTiming);
 
 
-        return String.valueOf(hour + ":" + minute + ":" + second);
+        return String.valueOf(leftTiming);
 
     }
 
