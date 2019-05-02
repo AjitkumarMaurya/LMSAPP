@@ -5,6 +5,8 @@
       <root url="jar://$APPLICATION_HOME_DIR$/gradle/caches/transforms-1/files-1.1/Toasty-1.3.0.aar/3b548b455fadae502a78f2a95bd1ba70/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/caches/modules-2/files-2.1/com.github.GrenderG/Toasty/1.3.0/f3bde7416971898ee815b5e8b1dadde051d6d8d7/Toasty-1.3.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

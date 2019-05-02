@@ -108,23 +108,34 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/_20ssp" />
 
-        <TextView
-            android:id="@+id/tv_next_step_course"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
+        <RelativeLayout
             android:gravity="right|center"
-            android:text="Next"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/_20ssp" />
-
-        <ImageView
-            android:id="@+id/next_step_course"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/triangle_right_orange" />
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/tv_next_step_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center"
+                android:text="Next"
+                android:paddingRight="@dimen/_40sdp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_20ssp" />
+
+            <ImageView
+                android:scaleType="fitEnd"
+                android:layout_alignParentRight="true"
+                android:id="@+id/next_step_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/triangle_right_orange" />
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 

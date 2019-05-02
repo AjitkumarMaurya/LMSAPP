@@ -244,19 +244,18 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                 }
             }
         });
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nextiv.performClick();
-            }
-        });
+
+
+
         previv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                eableNextBtn();
+
 
                 if (count > courseStartPoint) {
+                    eableNextBtn();
+
                     count--;
                     clearArrays();
                     if (count == courseStartPoint) {
@@ -1100,12 +1099,30 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
 
                     new callNetworkForTestDataSubmit(idTest, preferenceManager.getKeyValueString("userId"), preferenceManager.getKeyValueString("resultTestTimeUsed2"), preferenceManager.getKeyValueString("testResultSocre"), "A").execute();
 
-                    if (i!=netListSiz){
+
+
+                    /*if (i!=netListSiz){
                         eableNextBtn();
                         gomainscreen.setVisibility(View.GONE);
                         enableBottomBtn();
 
                     }else {
+                        diableBottomBtn();
+                        gomainscreen.setVisibility(View.VISIBLE);
+
+                    }*/
+
+
+                    if (i!=netListSiz){
+
+                             eableNextBtn();
+                            gomainscreen.setVisibility(View.GONE);
+                            enableBottomBtn();
+
+
+
+                    }else {
+
                         diableBottomBtn();
                         gomainscreen.setVisibility(View.VISIBLE);
 
@@ -1150,6 +1167,7 @@ public class StartCourseFragment extends Fragment implements CompoundButton.OnCh
                     new callNetworkForTestDataSubmit(idTest, preferenceManager.getKeyValueString("userId"), preferenceManager.getKeyValueString("resultTestTimeUsed2"), preferenceManager.getKeyValueString("testResultSocre"), "D").execute();
 
                     testRetryCount++;
+
                     if (testRetryCount >= testRetryCountTotal) {
                         tryagain.setVisibility(View.GONE);
 
